@@ -11,7 +11,7 @@
 var appUrl = 'https://plex-discord-app.herokuapp.com';
 var webhookKey = process.env.DISCORD_WEBHOOK_KEY;
 
-var redisClient = redis.createClient((16007, 'redis-16007.c2.eu-west-1-3.ec2.cloud.redislabs.com', password: '7JTUOk0Dxw1zdXMWcSunuhJCQ9u8rnqW'), { return_buffers: true });
+var redisClient = redis.createClient((16007, "redis-16007.c2.eu-west-1-3.ec2.cloud.redislabs.com", password: "7JTUOk0Dxw1zdXMWcSunuhJCQ9u8rnqW"), { return_buffers: true });
 var upload = multer({ storage: multer.memoryStorage() });
 var app = express();
 
