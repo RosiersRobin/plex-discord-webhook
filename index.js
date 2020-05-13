@@ -127,7 +127,7 @@ app.post('/', upload.single('thumb'), function (req, res, next) {
 						image.contain(75, 75)
 							.getBuffer(jimp.MIME_JPEG,
 								buffer => {
-									redisClient.setex(key, 7 * 24 * 60 * 60, buffer);
+									redisClient.setex(key, new Date(+(7 * 24 * 60 * 60)), buffer);
 								});
 					});
 			}
